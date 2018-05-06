@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('groups', 'GroupController');
+Route::resource('conversations', 'ConversationController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
